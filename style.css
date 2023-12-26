@@ -33,6 +33,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 .logo {
   font-size: 2.5rem;
@@ -185,13 +186,14 @@ section {
 }
 .home-imgHover {
   position: absolute;
-  top: 5rem;
+  top: 0rem;
   right: 0rem;
   width: 45%;
   height: 100%;
   background: transparent;
   /* border: 2px solid red; */
   transition: 3s;
+  z-index: 1;
 }
 .home-imgHover:hover {
   background: var(--bg-color);
