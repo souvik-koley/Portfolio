@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (activeLink) {
                     activeLink.classList.add('active');
                 }
+
+                //active sections for animation on scroll
+                section.classList.add('show-animate');
+            }
+            //if want to use animation that repeats on scroll use this
+            else {
+                section.classList.remove('show-animate');
             }
         });
     });
@@ -47,5 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
             menuIcon.classList.remove('bx-x');
             navbar.classList.remove('active');
         });
+    });
+    //animation footer on scroll
+    window.addEventListener('scroll', () => {
+        let footer = document.querySelector('footer');
+        let isScrolledToBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+    
+        footer.classList.toggle('show-animate', isScrolledToBottom);
     });
 });
